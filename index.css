@@ -197,6 +197,29 @@ a:hover { text-decoration: underline; }
     height: 1.2em;
 }
 
+/* Button Focus States for Keyboard Accessibility */
+.main-submit-btn:focus, .cta-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--primary-bg-subtle), var(--shadow-deep);
+    border-color: var(--primary-color-dark);
+    transform: translateY(-1px);
+}
+
+.secondary-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--primary-bg-subtle);
+    border-color: var(--primary-color);
+    background-color: var(--surface-accent-bg);
+}
+
+.back-btn:focus {
+    outline: none;
+    background-color: var(--surface-accent-bg);
+    color: var(--text-color);
+    box-shadow: 0 0 0 2px var(--primary-bg-subtle);
+    border-radius: var(--border-radius);
+}
+
 .link-btn {
     background: none;
     border: none;
@@ -215,6 +238,26 @@ a:hover { text-decoration: underline; }
     text-decoration: none;
 }
 
+.link-btn:focus {
+    outline: none;
+    background-color: var(--primary-bg-subtle);
+    box-shadow: 0 0 0 2px var(--primary-color);
+    text-decoration: none;
+}
+
+/* Generic button focus fallback for any buttons not covered above */
+button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Override for buttons with explicit focus styles */
+.main-submit-btn:focus, .cta-btn:focus, .secondary-btn:focus, .back-btn:focus, 
+.link-btn:focus, .service-type-btn:focus, .close-btn:focus, #chatbot-fab:focus, 
+#close-chat-btn:focus, .nav-link:focus {
+    outline: none;
+}
+
 /* --- Header --- */
 #main-header { position: sticky; top: 0; left: 0; width: 100%; background-color: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 100; padding: 1rem 0; border-bottom: 3px solid var(--border-color); transition: background-color 0.3s ease, border-color 0.3s ease; }
 #main-header .header-content { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
@@ -223,9 +266,11 @@ a:hover { text-decoration: underline; }
 #main-header h1 { font-size: 1.5rem; color: var(--primary-color); font-weight: 700; }
 #home-logo-link { text-decoration: none; border: 3px solid var(--component-border-color); padding: 0.25rem 1rem; border-radius: var(--border-radius); transition: border-color 0.2s ease, background-color 0.2s ease; }
 #home-logo-link:hover { border-color: var(--primary-color); background-color: var(--surface-accent-bg); text-decoration: none; }
+#home-logo-link:focus { outline: none; border-color: var(--primary-color); background-color: var(--surface-accent-bg); box-shadow: 0 0 0 2px var(--primary-bg-subtle); text-decoration: none; }
 .desktop-nav { display: flex; gap: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem; }
 .nav-link { color: var(--text-color-light); text-decoration: none; font-weight: 500; transition: all 0.2s ease; padding: 0.5rem 1rem; border-radius: var(--border-radius); border: 3px solid var(--component-border-color); }
 .nav-link:hover { background-color: var(--surface-accent-bg); color: var(--primary-color); border-color: var(--primary-color); text-decoration: none; }
+.nav-link:focus { outline: none; background-color: var(--surface-accent-bg); color: var(--primary-color); border-color: var(--primary-color); box-shadow: 0 0 0 2px var(--primary-bg-subtle); text-decoration: none; }
 #header-dashboard-link { display: none; } /* Hidden by default, shown for logged-in users */
 .header-controls { display: flex; align-items: center; gap: 1rem; }
 .theme-switcher { position: relative; }
@@ -234,6 +279,7 @@ a:hover { text-decoration: underline; }
 .theme-toggle-label::before { content: ''; position: absolute; width: 22px; height: 22px; background-color: var(--surface-color); border-radius: 50%; top: 3px; left: 3px; transition: transform 0.3s ease; box-shadow: var(--box-shadow); }
 .theme-toggle-checkbox:checked + .theme-toggle-label::before { transform: translateX(30px); }
 .theme-toggle-label svg { width: 20px; height: 20px; color: var(--text-color-light); }
+.theme-toggle-checkbox:focus + .theme-toggle-label { outline: none; box-shadow: 0 0 0 3px var(--primary-bg-subtle); border-color: var(--primary-color); }
 
 /* My Account Dropdown */
 #my-account-dropdown { position: relative; }
@@ -241,6 +287,7 @@ a:hover { text-decoration: underline; }
 #my-account-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
 .dropdown-item { display: block; padding: 0.75rem 1rem; color: var(--text-color); text-decoration: none; font-weight: 500; }
 .dropdown-item:hover { background-color: var(--background-color); }
+.dropdown-item:focus { outline: none; background-color: var(--background-color); box-shadow: inset 3px 0 0 var(--primary-color); }
 .dropdown-divider { height: 1px; background-color: var(--border-color); margin: 0.5rem 0; }
 
 
@@ -467,6 +514,13 @@ a:hover { text-decoration: underline; }
     box-shadow: var(--shadow-deep);
 }
 
+.service-type-btn:focus {
+    outline: none;
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-deep), 0 0 0 3px var(--primary-bg-subtle);
+}
+
 .service-type-btn.active {
     border-color: var(--primary-color);
     background-color: var(--primary-bg-subtle);
@@ -533,6 +587,8 @@ a:hover { text-decoration: underline; }
 .modal-content h3 { margin-bottom: 0.5rem; font-size: 1.5rem; }
 .modal-content .modal-desc { color: var(--text-color-light); margin-bottom: 1.5rem; }
 .close-btn { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; color: var(--text-color-light); cursor: pointer; line-height: 1; padding: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+.close-btn:hover, .close-btn:focus { color: var(--text-color); background-color: var(--surface-accent-bg); border-radius: 50%; }
+.close-btn:focus { outline: none; box-shadow: 0 0 0 2px var(--primary-bg-subtle); }
 .modal-footer {
     display: flex;
     justify-content: flex-end;
@@ -1607,6 +1663,13 @@ html[data-theme="light"] .compliance-check-text p {
     background-color: var(--primary-color-dark);
 }
 
+#chatbot-fab:focus {
+    outline: none;
+    transform: translateY(-2px) scale(1.05);
+    background-color: var(--primary-color-dark);
+    box-shadow: 0 0 0 3px var(--primary-bg-subtle), var(--shadow-deep);
+}
+
 #chatbot-fab svg {
     width: 32px;
     height: 32px;
@@ -1653,6 +1716,17 @@ html[data-theme="light"] .compliance-check-text p {
     color: var(--text-color-light);
     cursor: pointer;
     line-height: 1;
+}
+
+#close-chat-btn:hover, #close-chat-btn:focus {
+    color: var(--text-color);
+    background-color: var(--surface-accent-bg);
+    border-radius: 50%;
+}
+
+#close-chat-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-bg-subtle);
 }
 
 #chat-history {
