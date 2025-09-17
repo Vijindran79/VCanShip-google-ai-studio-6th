@@ -12,6 +12,8 @@ import { initializeDashboard } from './dashboard';
 import { initializeAccountPages }from './account';
 import { Chat } from '@google/genai';
 import { initializeI18n, updateStaticUIText } from './i18n';
+import React from 'react';
+import './index.css';
 
 // --- Global state for live tracking simulation ---
 let liveTrackingInterval: number | null = null;
@@ -690,3 +692,20 @@ async function main() {
 
 // --- Run on DOMContentLoaded ---
 document.addEventListener('DOMContentLoaded', main);
+
+const App = () => {
+    return (
+        <div className="app-container">
+            <header className="app-header">
+                <h1 style={{ color: 'var(--primary-color)' }}>Welcome to VCanShip</h1>
+            </header>
+            <main>
+                {/* ...existing code... */}
+                <button>Get Started</button>
+                {/* ...existing code... */}
+            </main>
+        </div>
+    );
+};
+
+export default App;

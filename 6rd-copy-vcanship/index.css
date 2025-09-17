@@ -16,9 +16,10 @@
 }
 
 html[data-theme="light"] {
-    --primary-color: #0057FF;
-    --primary-color-dark: #0045cc;
-    --secondary-color: #00A878;
+    /* ParcelForce-inspired palette: postal red + warm gold */
+    --primary-color: #D62828;
+    --primary-color-dark: #B01F24;
+    --secondary-color: #FFC107;
     --background-color: #F7F9FC;
     --surface-color: #FFFFFF;
     --surface-accent-bg: #F0F4F8;
@@ -45,15 +46,16 @@ html[data-theme="light"] {
     --overlay-bg: rgba(240, 244, 248, 0.6);
     --glass-bg: rgba(255, 255, 255, 0.8);
     --glass-border: rgba(0, 0, 0, 0.05);
-    --primary-bg-subtle: #e0eaff;
-    --secondary-bg-subtle: #dcfce7;
+    --primary-bg-subtle: #FDECEC;
+    --secondary-bg-subtle: #FFF7DB;
     color-scheme: light;
 }
 
 html[data-theme="dark"] {
-    --primary-color: #4299E1;
-    --primary-color-dark: #2B6CB0;
-    --secondary-color: #48BB78;
+    /* Warm red accents tuned for dark surfaces */
+    --primary-color: #FF6B6B;
+    --primary-color-dark: #E63946;
+    --secondary-color: #F6C453;
     --background-color: #1A202C;
     --surface-color: #2D3748;
     --surface-accent-bg: #202836;
@@ -79,8 +81,8 @@ html[data-theme="dark"] {
     --shadow-inset: inset 0 2px 4px rgba(0,0,0,0.2);
     --overlay-bg: rgba(26, 32, 44, 0.6);
     --glass-bg: rgba(45, 55, 72, 0.8);
-    --primary-bg-subtle: #2c3a50;
-    --secondary-bg-subtle: #2d453e;
+    --primary-bg-subtle: #3a1f21;
+    --secondary-bg-subtle: #3b3421;
     color-scheme: dark;
 }
 
@@ -678,6 +680,7 @@ a:hover { text-decoration: underline; }
     justify-content: center;
     position: relative;
     overflow: hidden;
+    /* Reverted: remove extra shadow/white gradients for a cleaner card */
 }
 
 .landing-card:hover {
@@ -702,7 +705,7 @@ a:hover { text-decoration: underline; }
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    /* A subtle, consistent overlay to ensure text readability */
+    /* Reverted: simple transparent dark overlay for readability */
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 0;
     transition: background-color 0.4s var(--ease-out-cubic);
@@ -738,12 +741,13 @@ a:hover { text-decoration: underline; }
     background-color: rgba(255, 255, 255, 0.9);
     color: var(--primary-color) !important; /* Make text color blue */
     text-shadow: none; /* Remove text shadow from button text */
-    border: 1px solid transparent;
 }
 .landing-card .cta-btn:hover {
     background-color: #FFFFFF;
     color: var(--primary-color-dark) !important;
 }
+
+/* Reverted: removed carrier chip below CTA */
 
 
 /* Specific Service Backgrounds */
