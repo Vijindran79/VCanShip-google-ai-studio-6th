@@ -150,6 +150,13 @@ body {
     color: var(--text-color);
     border-color: var(--text-color-light);
 }
+.sidebar-link:focus-visible {
+    outline: none;
+    background-color: var(--surface-accent-bg);
+    color: var(--text-color);
+    border-color: var(--text-color-light);
+    box-shadow: 0 0 0 3px var(--primary-bg-subtle);
+}
 .sidebar-link.active {
     background-color: var(--primary-bg-subtle);
     color: var(--primary-color);
@@ -181,6 +188,34 @@ a:hover { text-decoration: underline; }
 }
 
 
+/* --- Button Loading States --- */
+.main-submit-btn.loading,
+.cta-btn.loading {
+    position: relative;
+    pointer-events: none;
+    color: transparent !important;
+}
+
+.main-submit-btn.loading::after,
+.cta-btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spin 1s linear infinite;
+}
+
+@keyframes button-loading-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* --- Buttons --- */
 .main-submit-btn, .secondary-btn, .cta-btn { border-radius: var(--border-radius); padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; border: 3px solid transparent; }
 .main-submit-btn, .cta-btn { background-color: var(--primary-color); color: #fff; box-shadow: var(--box-shadow); border-color: var(--primary-color); }
@@ -193,7 +228,7 @@ a:hover { text-decoration: underline; }
 .secondary-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--primary-bg-subtle); }
 .back-btn { background: none; border: none; font-weight: 600; color: var(--text-color-light); padding: 0.5rem 1rem; margin-bottom: 1rem; }
 .back-btn:hover { background-color: var(--surface-accent-bg); color: var(--text-color); }
-.back-btn:focus { outline: none; background-color: var(--surface-accent-bg); color: var(--text-color); box-shadow: 0 0 0 3px var(--primary-bg-subtle); }
+.back-btn:focus-visible { outline: none; background-color: var(--surface-accent-bg); color: var(--text-color); box-shadow: 0 0 0 3px var(--primary-bg-subtle); }
 .full-width { width: 100%; }
 .main-submit-btn svg, .secondary-btn svg {
     width: 1.2em;
@@ -217,7 +252,7 @@ a:hover { text-decoration: underline; }
     background-color: var(--primary-bg-subtle);
     text-decoration: none;
 }
-.link-btn:focus {
+.link-btn:focus-visible {
     outline: none;
     background-color: var(--primary-bg-subtle);
     box-shadow: 0 0 0 3px var(--primary-bg-subtle);
@@ -231,9 +266,11 @@ a:hover { text-decoration: underline; }
 #main-header h1 { font-size: 1.5rem; color: var(--primary-color); font-weight: 700; }
 #home-logo-link { text-decoration: none; border: 3px solid var(--component-border-color); padding: 0.25rem 1rem; border-radius: var(--border-radius); transition: border-color 0.2s ease, background-color 0.2s ease; }
 #home-logo-link:hover { border-color: var(--primary-color); background-color: var(--surface-accent-bg); text-decoration: none; }
+#home-logo-link:focus-visible { outline: none; border-color: var(--primary-color); background-color: var(--surface-accent-bg); box-shadow: 0 0 0 3px var(--primary-bg-subtle); }
 .desktop-nav { display: flex; gap: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem; }
 .nav-link { color: var(--text-color-light); text-decoration: none; font-weight: 500; transition: all 0.2s ease; padding: 0.5rem 1rem; border-radius: var(--border-radius); border: 3px solid var(--component-border-color); }
 .nav-link:hover { background-color: var(--surface-accent-bg); color: var(--primary-color); border-color: var(--primary-color); text-decoration: none; }
+.nav-link:focus-visible { outline: none; background-color: var(--surface-accent-bg); color: var(--primary-color); border-color: var(--primary-color); box-shadow: 0 0 0 3px var(--primary-bg-subtle); }
 #header-dashboard-link { display: none; } /* Hidden by default, shown for logged-in users */
 .header-controls { display: flex; align-items: center; gap: 1rem; }
 .theme-switcher { position: relative; }
@@ -250,6 +287,7 @@ a:hover { text-decoration: underline; }
 #my-account-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
 .dropdown-item { display: block; padding: 0.75rem 1rem; color: var(--text-color); text-decoration: none; font-weight: 500; }
 .dropdown-item:hover { background-color: var(--background-color); }
+.dropdown-item:focus-visible { outline: none; background-color: var(--background-color); box-shadow: inset 0 0 0 2px var(--primary-color); }
 .dropdown-divider { height: 1px; background-color: var(--border-color); margin: 0.5rem 0; }
 
 
@@ -543,7 +581,7 @@ a:hover { text-decoration: underline; }
 .modal-content .modal-desc { color: var(--text-color-light); margin-bottom: 1.5rem; }
 .close-btn { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; color: var(--text-color-light); cursor: pointer; line-height: 1; padding: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
 .close-btn:hover { color: var(--text-color); background-color: var(--surface-accent-bg); border-radius: 50%; }
-.close-btn:focus { outline: none; color: var(--text-color); background-color: var(--surface-accent-bg); border-radius: 50%; box-shadow: 0 0 0 3px var(--primary-bg-subtle); }
+.close-btn:focus-visible { outline: none; color: var(--text-color); background-color: var(--surface-accent-bg); border-radius: 50%; box-shadow: 0 0 0 3px var(--primary-bg-subtle); }
 .modal-footer {
     display: flex;
     justify-content: flex-end;
@@ -563,6 +601,7 @@ a:hover { text-decoration: underline; }
 .social-login-buttons { display: flex; flex-direction: column; gap: 1rem; }
 .social-btn { display: flex; align-items: center; justify-content: center; gap: 0.75rem; width: 100%; padding: 0.75rem; border-radius: var(--border-radius); border: 1px solid var(--border-color); background-color: var(--surface-color); color: var(--text-color); font-weight: 600; cursor: pointer; transition: background-color 0.2s ease; }
 .social-btn:hover { background-color: var(--background-color); }
+.social-btn:focus-visible { outline: none; background-color: var(--background-color); box-shadow: 0 0 0 3px var(--primary-bg-subtle); }
 .social-btn svg { width: 24px; height: 24px; }
 .auth-toggle { margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-color-light); }
 .auth-toggle button {
@@ -579,6 +618,11 @@ a:hover { text-decoration: underline; }
 .auth-toggle button:hover {
     background-color: var(--primary-bg-subtle);
     text-decoration: none;
+}
+.auth-toggle button:focus-visible {
+    outline: none;
+    background-color: var(--primary-bg-subtle);
+    box-shadow: 0 0 0 3px var(--primary-bg-subtle);
 }
 
 /* Pre-launch Modal */
@@ -750,7 +794,7 @@ a:hover { text-decoration: underline; }
     padding: 0.5rem;
     color: var(--text-color);
 }
-.mobile-nav-toggle:focus {
+.mobile-nav-toggle:focus-visible {
     outline: none;
     background-color: var(--surface-accent-bg);
     border-radius: var(--border-radius);
@@ -1624,6 +1668,11 @@ html[data-theme="light"] .compliance-check-text p {
     background-color: var(--primary-color-dark);
 }
 
+#chatbot-fab:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-deep), 0 0 0 4px var(--primary-bg-subtle);
+}
+
 #chatbot-fab svg {
     width: 32px;
     height: 32px;
@@ -1760,6 +1809,12 @@ html[data-theme="light"] .compliance-check-text p {
     background-color: var(--surface-color);
     color: var(--primary-color);
 }
+#chat-form button:focus-visible {
+    outline: none;
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
 #chat-form button svg {
     width: 24px;
     height: 24px;
@@ -1805,6 +1860,12 @@ footer {
 .footer-links a:hover, .footer-contact a:hover {
     color: var(--primary-color);
     text-decoration: none;
+}
+.footer-links a:focus-visible, .footer-contact a:focus-visible {
+    outline: none;
+    color: var(--primary-color);
+    text-decoration: underline;
+    box-shadow: 0 2px 0 var(--primary-color);
 }
 .footer-contact span:not([class]) {
     color: var(--border-color);
