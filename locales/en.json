@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "VCanship",
+    "track": "Track",
+    "login": "Login",
+    "myAccount": "My Account",
+    "nav": {
+      "services": "Services",
+      "dashboard": "Dashboard",
+      "apiHub": "API Hub",
+      "helpCenter": "Help Center"
+    }
+  },
+  "footer": {
+    "helpCenter": "Help Center",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "inspectorPortal": "Inspector Portal",
+    "copyright": "© 2024 Vcanship by Vcan Resources. All Rights Reserved."
+  },
+  "landing": {
+    "parcel_title": "Send a Parcel",
+    "parcel_subtitle": "Fast, affordable, international delivery",
+    "parcel_cta": "Get a Quote",
+    "air_freight_title": "Air Freight",
+    "air_freight_cta": "Book Air Freight",
+    "fcl_title": "FCL Shipping",
+    "fcl_cta": "Book FCL",
+    "lcl_title": "LCL Shipping",
+    "lcl_cta": "Book LCL",
+    "ecommerce_title": "E-commerce Solutions",
+    "ecommerce_subtitle": "Integrated fulfillment, warehousing, and last-mile delivery",
+    "ecommerce_cta": "Get Started",
+    "partner_title": "Become a Partner",
+    "partner_subtitle": "Join our global network of trusted carriers",
+    "partner_cta": "Register Now"
+  },
+  "parcel": {
+    "back_to_services": "Back to Services",
+    "title": "Send a Parcel",
+    "subtitle": "Enter your shipment details to get instant quotes.",
+    "pickup_option": "Pickup Option",
+    "schedule_pickup": "Schedule Pickup",
+    "schedule_pickup_desc": "We'll collect from your address.",
+    "drop_off": "I'll Drop it Off",
+    "drop_off_desc": "Find a nearby location.",
+    "origin": "Origin",
+    "destination": "Destination",
+    "full_name": "Full Name",
+    "street_address": "Street Address",
+    "city": "City",
+    "postcode": "Postcode / ZIP",
+    "country": "Country",
+    "package_details": "Package Details",
+    "weight_kg": "Weight (kg)",
+    "length_cm": "Length (cm)",
+    "width_cm": "Width (cm)",
+    "height_cm": "Height (cm)",
+    "item_details": "Item Details",
+    "description": "Description",
+    "hs_code_optional": "HS Code (Optional)",
+    "get_quotes": "Get Quotes"
+  },
+  "modals": {
+      "track": {
+          "title": "Track Your Shipment"
+      }
+  },
+  "common": {
+    "fullName": "Full Name"
+  }
+}
