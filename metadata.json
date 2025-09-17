@@ -1,0 +1,9 @@
+{
+  "name": " 6rd copy Vcanship",
+  "description": "Vcanship's AI-driven platform relentlessly finds the cheapest global shipping rates for parcels and freight, leveraging exclusive capacity and market intelligence.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "prompt": ""
+}
