@@ -1,0 +1,43 @@
+{
+  "header": {
+    "title": "VCanship",
+    "track": "Rastrear",
+    "login": "Iniciar Sesión",
+    "myAccount": "Mi Cuenta",
+    "nav": {
+      "services": "Servicios",
+      "dashboard": "Tablero",
+      "apiHub": "Centro de API",
+      "helpCenter": "Centro de Ayuda"
+    }
+  },
+  "footer": {
+    "helpCenter": "Centro de Ayuda",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
+    "inspectorPortal": "Portal de Inspección",
+    "copyright": "© 2024 Vcanship por Vcan Resources. Todos los derechos reservados."
+  },
+  "landing": {
+    "parcel_title": "Enviar un Paquete",
+    "parcel_subtitle": "Entrega internacional rápida y asequible",
+    "parcel_cta": "Obtener Cotización",
+    "air_freight_title": "Carga Aérea",
+    "air_freight_cta": "Reservar Carga Aérea",
+    "fcl_title": "Envío FCL",
+    "fcl_cta": "Reservar FCL",
+    "lcl_title": "Envío LCL",
+    "lcl_cta": "Reservar LCL",
+    "ecommerce_title": "Soluciones de E-commerce",
+    "ecommerce_subtitle": "Cumplimiento integrado, almacenamiento y entrega de última milla",
+    "ecommerce_cta": "Comenzar",
+    "partner_title": "Conviértase en Socio",
+    "partner_subtitle": "Únase a nuestra red global de transportistas de confianza",
+    "partner_cta": "Registrarse Ahora"
+  },
+   "modals": {
+      "track": {
+          "title": "Rastrea Tu Envío"
+      }
+  }
+}
