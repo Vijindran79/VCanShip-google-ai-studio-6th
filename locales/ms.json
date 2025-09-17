@@ -1,0 +1,73 @@
+
+{
+  "header": {
+    "title": "VCanship",
+    "track": "Jejak",
+    "login": "Log Masuk",
+    "myAccount": "Akaun Saya",
+    "nav": {
+      "services": "Perkhidmatan",
+      "dashboard": "Papan Pemuka",
+      "apiHub": "Hab API",
+      "helpCenter": "Pusat Bantuan"
+    }
+  },
+  "footer": {
+    "helpCenter": "Pusat Bantuan",
+    "privacyPolicy": "Dasar Privasi",
+    "termsOfService": "Syarat Perkhidmatan",
+    "inspectorPortal": "Portal Pemeriksa",
+    "copyright": "© 2024 Vcanship oleh Vcan Resources. Hak Cipta Terpelihara."
+  },
+  "landing": {
+    "parcel_title": "Hantar Bungkusan",
+    "parcel_subtitle": "Penghantaran antarabangsa yang pantas dan berpatutan",
+    "parcel_cta": "Dapatkan Sebut Harga",
+    "air_freight_title": "Kargo Udara",
+    "air_freight_cta": "Tempah Kargo Udara",
+    "fcl_title": "Penghantaran FCL",
+    "fcl_cta": "Tempah FCL",
+    "lcl_title": "Penghantaran LCL",
+    "lcl_cta": "Tempah LCL",
+    "ecommerce_title": "Penyelesaian E-dagang",
+    "ecommerce_subtitle": "Pemenuhan bersepadu, penggudangan, dan penghantaran batu terakhir",
+    "ecommerce_cta": "Mulakan",
+    "partner_title": "Jadi Rakan Kongsi",
+    "partner_subtitle": "Sertai rangkaian global kami yang terdiri daripada pembawa yang dipercayai",
+    "partner_cta": "Daftar Sekarang"
+  },
+  "parcel": {
+    "back_to_services": "Kembali ke Perkhidmatan",
+    "title": "Hantar Bungkusan",
+    "subtitle": "Masukkan butiran penghantaran anda untuk mendapatkan sebut harga segera.",
+    "pickup_option": "Pilihan Pengambilan",
+    "schedule_pickup": "Jadualkan Pengambilan",
+    "schedule_pickup_desc": "Kami akan mengambil dari alamat anda.",
+    "drop_off": "Saya Akan Hantar Sendiri",
+    "drop_off_desc": "Cari lokasi berdekatan.",
+    "origin": "Asal",
+    "destination": "Destinasi",
+    "full_name": "Nama Penuh",
+    "street_address": "Alamat Jalan",
+    "city": "Bandar",
+    "postcode": "Poskod / ZIP",
+    "country": "Negara",
+    "package_details": "Butiran Pakej",
+    "weight_kg": "Berat (kg)",
+    "length_cm": "Panjang (cm)",
+    "width_cm": "Lebar (cm)",
+    "height_cm": "Tinggi (cm)",
+    "item_details": "Butiran Item",
+    "description": "Penerangan",
+    "hs_code_optional": "Kod HS (Pilihan)",
+    "get_quotes": "Dapatkan Sebut Harga"
+  },
+  "modals": {
+      "track": {
+          "title": "Jejak Penghantaran Anda"
+      }
+  },
+  "common": {
+    "fullName": "Nama Penuh"
+  }
+}
